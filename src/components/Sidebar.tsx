@@ -27,6 +27,8 @@ function Sidebar() {
 
         <Stack
         sx={{
+            display: {xs: "none", md: "flex"},
+            flexDirection: "column",
            borderRight: theme === 'AlphaTwelve' ? `2px solid #F1F5F9` : `none`,
             background: theme === 'AlphaTwelve' ? "" : "#484554"
         }}

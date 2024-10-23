@@ -12,7 +12,7 @@ const style = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: "50%",
+
 
     boxShadow: 24,
 
@@ -37,7 +37,7 @@ export default function EventModal({open, handleClose, selected}: {
                 aria-labelledby="modal-modal-title"
                 aria-describedby="modal-modal-description"
             >
-                <Box sx={{...style, background: theme === 'AlphaTwelve' ? "#fff" as string  : "#383544",}}>
+                <Box sx={{...style, width: {xs:"100%", md: "50%"}, background: theme === 'AlphaTwelve' ? "#fff" as string  : "#383544",}}>
                     <Stack spacing={4} >
 
                         <Stack spacing={0} p={4}>
@@ -81,14 +81,14 @@ export default function EventModal({open, handleClose, selected}: {
                             </Typography>
                         </Stack>
 
-                        <Box width={"100%"} display={"flex"} justifyContent={"space-between"} alignItems={"center"}
+                        <Box width={"100%"} display={{xs:"column", ms:"flex"}} gap={"10px"} justifyContent={"space-between"} alignItems={"center"}
                              bgcolor={{background: theme === 'AlphaTwelve' ? "#F8FAFC" as string  : "#6A6676",}} padding={"2rem 2rem"}>
-                            <Button variant="outlined" color="inherit">Edit</Button>
-                            <Stack direction={"row"} alignItems={"center"} spacing={2}>
-                                <Button variant="contained" color="error">
+                            <Button sx={{width: {xs: "100%", md: "auto"}, borderRadius: "0px" }} variant="outlined" color="inherit">Edit</Button>
+                            <Stack mt={2} direction={{xs:"column", md:"row"}} alignItems={"center"} spacing={2}>
+                                <Button sx={{width: {xs: "100%", md: "auto"}, borderRadius: "0px" }} variant="contained" color="error">
                                     Delete
                                 </Button>
-                                <Button variant="contained" color="secondary">
+                                <Button sx={{width: {xs: "100%", md: "auto"}, borderRadius: "0px" }} variant="contained" color="secondary">
                                     Mark as completed
                                 </Button>
                             </Stack>
