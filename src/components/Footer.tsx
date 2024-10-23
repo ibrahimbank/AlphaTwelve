@@ -33,7 +33,9 @@ function Footer() {
                                 color: theme === 'AlphaTwelve' ?  "#334155" : "#fff",
                             }}>
 
-                               <Icon/>
+                                {Icon
+                                    ? <Icon/>
+                                    : null}
                                 { (name)}
 
                             </Box>
