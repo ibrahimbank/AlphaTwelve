@@ -7,7 +7,7 @@ import {carouselData} from "@/mock/CarouselData";
 
 function EventCarousel() {
     return (
-        <Swiper
+        <Swiper style={{width:"100%"}}
             modules={[Navigation, Pagination]}
             spaceBetween={50}
             slidesPerView={1}
@@ -16,7 +16,7 @@ function EventCarousel() {
         >
 
             {carouselData.map((item) => (
-                <SwiperSlide key={item.id}>
+                <SwiperSlide key={item.id} style={{width:"100%"}} >
                     <Box className="carousel-slide">
                         <Box className="overlay"></Box>
                         <Image
